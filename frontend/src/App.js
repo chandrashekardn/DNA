@@ -374,7 +374,7 @@ function App() {
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center space-x-2">
-                      <Brain className="h-5 w-5 text-purple-600" />
+                      <span className="text-purple-600">🧠</span>
                       <span>Important Genomic Regions</span>
                     </CardTitle>
                   </CardHeader>
