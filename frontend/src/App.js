@@ -159,16 +159,16 @@ function App() {
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
           <TabsList className="grid w-full grid-cols-3">
             <TabsTrigger value="input" className="flex items-center space-x-2">
-              <FileText className="h-4 w-4" />
+              <span>📄</span>
               <span>Sequence Input</span>
             </TabsTrigger>
             <TabsTrigger value="results" disabled={!predictions}>
-              <Activity className="h-4 w-4 mr-2" />
-              Disease Predictions
+              <span>📊</span>
+              <span className="ml-2">Disease Predictions</span>
             </TabsTrigger>
             <TabsTrigger value="explainability" disabled={!explainability}>
-              <Brain className="h-4 w-4 mr-2" />
-              Analysis Details
+              <span>🧠</span>
+              <span className="ml-2">Analysis Details</span>
             </TabsTrigger>
           </TabsList>
 
