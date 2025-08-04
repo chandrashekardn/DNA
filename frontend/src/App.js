@@ -294,7 +294,7 @@ function App() {
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center space-x-2">
-                      <Activity className="h-5 w-5 text-red-600" />
+                      <span className="text-red-600">🩺</span>
                       <span>Disease Risk Predictions</span>
                     </CardTitle>
                   </CardHeader>
