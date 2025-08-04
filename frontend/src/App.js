@@ -176,7 +176,7 @@ function App() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
-                  <DNA className="h-5 w-5 text-blue-600" />
+                  <span>🧬</span>
                   <span>DNA Sequence Input</span>
                 </CardTitle>
               </CardHeader>
