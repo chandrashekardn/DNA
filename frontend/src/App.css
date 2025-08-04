@@ -1,34 +1,183 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Custom styles for DNA Analysis App */
+
+.App {
+  min-height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* DNA sequence display styling */
+.dna-sequence {
+  font-family: 'Courier New', monospace;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  word-break: break-all;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+/* Nucleotide color coding */
+.nucleotide {
+  padding: 1px 2px;
+  border-radius: 2px;
+  margin: 0 1px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.App-link {
-    color: #61dafb;
+.nucleotide:hover {
+  transform: scale(1.1);
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.nucleotide-A {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+.nucleotide-T {
+  background-color: #e8f5e8;
+  color: #388e3c;
+}
+
+.nucleotide-C {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.nucleotide-G {
+  background-color: #fff3e0;
+  color: #f57c00;
+}
+
+.nucleotide-N {
+  background-color: #f5f5f5;
+  color: #757575;
+}
+
+/* Risk level styling */
+.risk-high {
+  background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+  border-left: 4px solid #f44336;
+}
+
+.risk-medium {
+  background: linear-gradient(135deg, #fffde7 0%, #fff9c4 100%);
+  border-left: 4px solid #ff9800;
+}
+
+.risk-low {
+  background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+  border-left: 4px solid #4caf50;
+}
+
+/* Animation for loading states */
+.pulse-animation {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Sequence analysis stats */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+/* Prediction card animations */
+.prediction-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.prediction-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Progress bar customization */
+.progress-bar {
+  transition: width 0.8s ease-in-out;
+}
+
+/* Important regions styling */
+.important-region {
+  border-left: 3px solid #3b82f6;
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.1) 0%, transparent 100%);
+  transition: all 0.2s ease;
+}
+
+.important-region:hover {
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.2) 0%, rgba(59, 130, 246, 0.05) 100%);
+}
+
+/* Motif analysis styling */
+.motif-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.motif-card:hover {
+  border-color: #3b82f6;
+  transform: translateY(-1px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .nucleotide {
+    margin: 0;
+    padding: 0 1px;
+  }
+}
+
+/* Accessibility improvements */
+.nucleotide:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+button:focus,
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none;
+  }
+  
+  .prediction-card {
+    break-inside: avoid;
+    margin-bottom: 1rem;
+  }
 }
