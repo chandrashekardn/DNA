@@ -278,9 +278,9 @@ function App() {
                   className="w-full"
                 >
                   {loading ? (
-                    <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                    <span className="mr-2 animate-spin">⏳</span>
                   ) : (
-                    <Brain className="h-4 w-4 mr-2" />
+                    <span className="mr-2">🧠</span>
                   )}
                   {loading ? 'Analyzing Sequence...' : 'Analyze DNA Sequence'}
                 </Button>
