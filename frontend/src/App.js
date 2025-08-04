@@ -243,7 +243,7 @@ function App() {
                   <Card className="bg-gray-50">
                     <CardHeader>
                       <CardTitle className="text-lg flex items-center space-x-2">
-                        <BarChart3 className="h-4 w-4" />
+                        <span>📊</span>
                         <span>Sequence Statistics</span>
                       </CardTitle>
                     </CardHeader>
