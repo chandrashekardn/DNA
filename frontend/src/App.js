@@ -228,7 +228,7 @@ function App() {
 
                 {validationErrors.length > 0 && (
                   <Alert variant="destructive">
-                    <AlertCircle className="h-4 w-4" />
+                    <span className="text-red-500 mr-2">⚠️</span>
                     <AlertDescription>
                       <ul className="list-disc list-inside">
                         {validationErrors.map((error, index) => (
