@@ -209,7 +209,7 @@ function App() {
                       <label htmlFor="sequence-file" className="cursor-pointer">
                         <Button variant="outline" size="sm" asChild>
                           <span>
-                            <Upload className="h-4 w-4 mr-2" />
+                            <span className="mr-2">📤</span>
                             Upload FASTA
                           </span>
                         </Button>
